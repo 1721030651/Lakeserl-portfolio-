@@ -1,148 +1,159 @@
 {
-    "Header.Item1": "Giới thiệu",
-    "Header.Item2": "Kinh nghiệm",
-    "Header.Item3": "Dự án",
-    "Header.Item4": "Kỹ năng",
-    "Header.Item5": "Liên hệ",
-    "Header.cvBtn": "Sơ yếu lý lịch",
-    "Header.cvName": "VuDinhLam_CV.pdf",
+  "Header.Item1": "Giới thiệu",
+  "Header.Item2": "Kinh nghiệm",
+  "Header.Item3": "Dự án",
+  "Header.Item4": "Kỹ năng",
+  "Header.Item5": "Liên hệ",
+  "Header.cvBtn": "Sơ yếu lý lịch",
+  "Header.cvName": "VuDinhLam_CV.pdf",
 
-    "Banner.Pretitle": "Xin chào, tôi là ",
-    "Banner.Description": "Tôi là một <span class='underline'>Fullstack Developer</span> có kinh nghiệm thực tế phát triển hệ thống backend doanh nghiệp bằng <span class='underline'>Spring Boot</span>, ứng dụng web động với <span class='underline'>Angular</span> và ứng dụng di động native bằng <span class='underline'>Kotlin Android</span>. Có kinh nghiệm đóng gói và vận hành tự động hóa với <span class='underline'>Docker</span>, <span class='underline'>CI/CD</span> trên hạ tầng <span class='underline'>AWS</span> kết hợp giám sát <span class='underline'>Observability</span> toàn diện.",
-    "Banner.ActionBtn": "Xin chào",
+  "Banner.Pretitle": "Xin chào, tôi là ",
+  "Banner.Description": "Backend Developer với gần 1 năm kinh nghiệm thực tế xây dựng và bảo trì RESTful API bằng Java (<span class='underline'>Spring Boot</span>) và Python (<span class='underline'>FastAPI</span>). Có định hướng phát triển microservices, event-driven architecture và viết code sạch, ổn định, được kiểm thử tốt.",
+  "Banner.ActionBtn": "Xin chào",
 
-    "AboutMe.Title": "Về Tôi",
-    "AboutMe.Paragraphs": [
-      "Tôi là một <span class='underline'>Fullstack Developer</span> chuyên sâu vào việc xây dựng hệ thống backend hiệu năng cao, chuẩn doanh nghiệp bằng <span class='underline'>Spring Boot</span> và phát triển giao diện web mượt mà, phản hồi nhanh với <span class='underline'>Angular</span>.",
-      "Tôi cũng có kinh nghiệm thực tế phát triển các ứng dụng di động native bằng <span class='underline'>Kotlin Android</span>, hướng tới việc viết code sạch, áp dụng kiến trúc hiện đại và tích hợp API RESTful mượt mà.",
-      "Ngoài ra, trong thời gian thực tập, tôi đã tích lũy kinh nghiệm thực tế phát triển các dịch vụ backend bằng <span class='underline'>Python </span>, xây dựng RESTful API hiệu năng cao và làm việc với các hệ thống xử lý thời gian thực.",
-      "Tôi làm việc trên toàn bộ chu trình phát triển sản phẩm — từ đóng gói container bằng <span class='underline'>Docker</span>, xây dựng luồng <span class='underline'>CI/CD pipelines</span> tự động hóa đến triển khai hạ tầng cloud bảo mật trên <span class='underline'>AWS</span>.",
-      "Tôi luôn đặt sự <span class='underline'>ổn định</span> và <span class='underline'>khả năng mở rộng</span> lên hàng đầu, đảm bảo hệ thống luôn được theo dõi, tối ưu hóa liên tục thông qua các giải pháp <span class='underline'>Observability</span> hiện đại."
-    ],
+  "AboutMe.Title": "Về Tôi",
+  "AboutMe.Paragraphs": [
+    "Tôi là một <span class='underline'>Backend Developer</span> với gần 1 năm kinh nghiệm thực tế xây dựng và bảo trì RESTful API.",
+    "Công nghệ backend chính của tôi là Java với <span class='underline'>Spring Boot</span> và Python với <span class='underline'>FastAPI</span>.",
+    "Tôi quan tâm đến microservices, event-driven architecture và việc viết code sạch, ổn định, được kiểm thử tốt.",
+    "Tôi có kinh nghiệm làm việc với cơ sở dữ liệu, tích hợp API, xử lý bất đồng bộ và các dịch vụ backend cho quy trình nghiệp vụ thực tế.",
+    "Tôi cũng làm việc với <span class='underline'>Docker</span>, <span class='underline'>CI/CD</span>, <span class='underline'>AWS</span> và các công cụ monitoring để hỗ trợ triển khai backend ổn định."
+  ],
 
-    "Education.Title": "Học vấn",
-    "Education.ExperienceTitle": "Kinh nghiệm làm việc",
-    "Education.Records": [
-        {
-            "Tab": "Đại học",
-            "Degree": "Đang theo học",
-            "School": "Trường Đại học Công nghệ Đồng Nai",
-            "Date": "09/2021 – 10/2026",
-            "Description": [
-                "Chuyên ngành <span class='underline'>Công nghệ thông tin</span>",
-                "Đồ án tốt nghiệp: <span class='underline'>SignConnect</span> — Hệ thống nhận diện ngôn ngữ ký hiệu thời gian thực, đã bảo vệ trước hội đồng học thuật",
-                "Tập trung vào Kỹ thuật phần mềm, Hệ quản trị CSDL, và AI ứng dụng",
-                "Dự kiến tốt nghiệp: tháng 10/2026"
-            ]
-        },
-        {
-            "Tab": "Tự học",
-            "Degree": "Backend & AI/ML (Tự học)",
-            "School": "Udemy · Coursera · Tài liệu chính thức",
-            "Date": "2022 – nay",
-            "Description": [
-                "Tập trung vào <span class='underline'>Python</span>, <span class='underline'>FastAPI</span>, <span class='underline'>PyTorch</span>, <span class='underline'>TensorFlow</span>",
-                "Học kiến thức cloud: <span class='underline'>AWS EC2, S3, RDS</span>, Docker, CI/CD",
-                "Luyện tập <span class='underline'>Cấu trúc dữ liệu & Giải thuật</span> để chuẩn bị phỏng vấn kỹ thuật"
-            ]
-        }
-    ],
-
-    "Services": {
-        "Title": "Kỹ năng & Dịch vụ",
-        "Backend": {
-            "Title": "Phát triển Fullstack",
-            "Description": "Xây dựng các ứng dụng web chất lượng cao. Tôi thiết kế các hệ thống backend vững chắc bằng <span class='underline'>Spring Boot</span> kết hợp cơ sở dữ liệu quan hệ, đồng thời kiến tạo giao diện người dùng tương tác mạnh mẽ với <span class='underline'>Angular</span>."
-        },
-        "DevOps": {
-            "Title": "DevOps & Infrastructure",
-            "Description": "Xây dựng và vận hành hệ thống triển khai tự động hóa. Có kinh nghiệm đóng gói ứng dụng với <span class='underline'>Docker</span>, thiết lập luồng <span class='underline'>CI/CD</span>, triển khai hạ tầng <span class='underline'>AWS</span> và đảm bảo hệ thống hoạt động ổn định nhờ các giải pháp giám sát <span class='underline'>Observability</span> toàn diện."
-        },
-        "AI": {
-            "Title": "Phát triển Mobile",
-            "Description": "Thiết kế và xây dựng các ứng dụng di động Android native hiệu năng cao bằng <span class='underline'>Kotlin</span>. Tập trung vào kiến trúc sạch, thư viện Jetpack hiện đại, trải nghiệm người dùng tối ưu và tích hợp API backend mượt mà."
-        }
+  "Education.Title": "Học vấn",
+  "Education.ExperienceTitle": "Kinh nghiệm làm việc",
+  "Education.Records": [
+    {
+      "Tab": "Đại học",
+      "Degree": "Đang theo học",
+      "School": "Trường Đại học Công nghệ Đồng Nai",
+      "Date": "09/2021 – 09/2026",
+      "Description": [
+        "Chuyên ngành <span class='underline'>Công nghệ thông tin</span>",
+        "Đồ án tốt nghiệp: <span class='underline'>SignConnect</span> — Hệ thống nhận diện ngôn ngữ ký hiệu thời gian thực, đã bảo vệ trước hội đồng học thuật",
+        "Tập trung vào Backend, Hệ quản trị CSDL và thiết kế API",
+        "GPA: 3.2/4",
+        "Dự kiến tốt nghiệp: tháng 9/2026"
+      ]
     },
+    {
+      "Tab": "Tự học",
+      "Degree": "Phát triển Backend (Tự học)",
+      "School": "Udemy · Coursera · Tài liệu chính thức",
+      "Date": "2022 – nay",
+      "Description": [
+        "Tập trung vào <span class='underline'>Spring Boot</span>, <span class='underline'>FastAPI</span>, RESTful API và kiến trúc backend",
+        "Tự học cơ sở dữ liệu, <span class='underline'>Docker</span>, <span class='underline'>CI/CD</span> và <span class='underline'>AWS</span>",
+        "Luyện tập <span class='underline'>JUnit</span>, <span class='underline'>pytest</span> và kiểm thử API"
+      ]
+    }
+  ],
 
-    "Experience.Records": [
-        {
-            "Role": "Backend Developer Intern",
-            "Company": "Automate-Solutions",
-            "Date": "10/2025 – 04/2026",
-            "Descriptions": [
-                "Thiết kế RESTful API endpoints, data schemas và business logic cho 3 module B2B cốt lõi (Vendors, Scope of Services, Country Requirements) trên nền tảng production phục vụ khách hàng doanh nghiệp.",
-                "Nâng độ phủ test API từ <strong>40% → 80%</strong> bằng pytest, loại bỏ regression bugs qua 3 sprint liên tiếp trước khi đưa lên production.",
-                "Xây dựng và triển khai CI/CD pipelines tích hợp cảnh báo Grafana, rút ngắn thời gian deploy từ <strong>~45 phút → ~8 phút</strong> trên môi trường staging và production."
-            ],
-            "Tags": ["FastAPI", "pytest", "CI/CD", "Grafana", "AWS"],
-            "Link": "https://alpha.atlas.galvanek-bau.de",
-            "LinkText": "atlas.galvanek-bau.de"
-        },
-        {
-            "Role": "Freelance Full-stack Developer",
-            "Company": "Self-employed",
-            "Date": "2025 – Nay",
-            "Descriptions": [
-                "Nhận dự án từ khách hàng và xử lý toàn bộ từ đầu đến cuối — từ thu thập yêu cầu đến <span class='underline'>triển khai production</span>, bao gồm cả frontend lẫn backend.",
-                "Tích hợp các tính năng <span class='underline'>AI</span> vào sản phẩm của khách hàng — bao gồm chatbot, logic gợi ý, và serving ML model qua API endpoints."
-            ],
-            "Tags": ["FastAPI", "Angular", "Python", "AI Integration"],
-            "Link": "",
-            "LinkText": ""
-        }
-    ],
+  "Services": {
+    "Title": "Kỹ năng & Dịch vụ",
+    "Backend": {
+      "Title": "Phát triển Backend",
+      "Description": "Xây dựng các dịch vụ backend và RESTful API đáng tin cậy bằng <span class='underline'>Spring Boot</span> và <span class='underline'>FastAPI</span>. Có kinh nghiệm với Spring Cloud, Spring Security, Celery, REST API và microservices."
+    },
+    "DevOps": {
+      "Title": "DevOps & Infrastructure",
+      "Description": "Làm việc với <span class='underline'>Docker</span>, Git, <span class='underline'>CI/CD</span>, <span class='underline'>AWS</span>, Postman và CloudWatch để hỗ trợ triển khai, monitoring và vận hành backend ổn định."
+    },
+    "AI": {
+      "Title": "Kỹ thuật API",
+      "Description": "Làm việc với PostgreSQL, MongoDB, MySQL, Redis, Kafka, JUnit, pytest và Playwright cho dữ liệu backend, messaging và quy trình kiểm thử."
+    }
+  },
 
-    "Project.Title": "Dự án của tôi",
-    "Project.Label": "Dự án nổi bật",
-    "Project.Projects": [
-        {
-            "Title": "CalmSkin- ",
-            "Description": "Hệ thống nhận diện ngôn ngữ ký hiệu thời gian thực — <span class='underline'>FastAPI AI backend</span> (mô hình BiLSTM) + <span class='underline'>frontend Next.js/MediaPipe</span> — tạo phụ đề trực tiếp trong cuộc gọi video với <span class='underline'>~85% độ chính xác</span>. Đã triển khai đến 4 người dùng thực từ trường dành cho người khiếm thính.",
-            "imgs": [
-                "/images/signConnect/demo1.png",
-                "/images/signConnect/demo2.png",
-                "/images/signConnect/demo3.png"
-            ],
-            "ghLink": "https://github.com/Lakeserl/Graduation-Thesis",
-            "demoLink": "https://www.youtube.com/watch?v=D0aOYq8ERb0",
-            "Technologies": ["FastAPI", "BiLSTM", "PyTorch", "MediaPipe", "Next.js", "WebSocket"]
-        },
-        {
-            "Title": "CalmSKIN – Nền tảng thương mại điện tử mỹ phẩm chăm sóc da",
-            "Description": "Hệ thống thương mại điện tử chuyên nghiệp, có khả năng mở rộng cao được xây dựng trên kiến trúc <span class='underline'>microservices với Spring Boot 3</span> và front-end ứng dụng <span class='underline'>Angular 21 + Tailwind CSS v4</span>. Tích hợp công cụ <span class='underline'>quét da mặt bằng AI</span> đột phá (sử dụng Spring AI + Gemini API) giúp tự động phân tích và chẩn đoán tình trạng da, xử lý luồng sự kiện bất đồng bộ qua <span class='underline'>Apache Kafka</span>, bộ đệm Redis, bảo mật định danh JWT, cùng hệ thống telemetry giám sát toàn diện (Micrometer, Zipkin, Prometheus, Grafana) đóng gói hoàn chỉnh bằng Docker.",
-            "imgs": [
-                "./images/calmSkin/demo1.png",
-                "./images/calmSkin/demo2.png",
-                "./images/calmSkin/demo3.png",
-                "./images/calmSkin/demo4.png"
-            ],
-            "ghLink": "https://github.com/Lakeserl/CalmSkin",
-            "ghLinkFe": "https://github.com/Lakeserl/CalmSkin-fe",
-            "demoLink": "",
-            "Technologies": ["Spring Boot 3", "Angular 21", "Tailwind CSS v4", "Spring Cloud", "Apache Kafka", "PostgreSQL", "Redis", "Docker", "Prometheus & Grafana"]
-        }
-    ],
+  "Experience.Records": [
+    {
+      "Role": "Backend Developer Intern",
+      "Company": "Automate-Solutions",
+      "Date": "1/10/2025 – 1/4/2026",
+      "Descriptions": [
+        "Xây dựng và bảo trì REST API bằng FastAPI cho các dịch vụ automation nội bộ.",
+        "Triển khai xử lý job bất đồng bộ bằng Celery và tối ưu các truy vấn cơ sở dữ liệu.",
+        "Nâng độ phủ test backend từ <strong>70% → 85%</strong> bằng Pytest và viết end-to-end test bằng Playwright.",
+        "Theo dõi latency và lỗi API bằng AWS CloudWatch, đồng thời tham gia xây dựng CI/CD pipeline và code review."
+      ],
+      "Tags": ["FastAPI", "Celery", "PostgreSQL", "Pytest", "AWS"],
+      "Link": "https://alpha.atlas.galvanek-bau.de",
+      "LinkText": "atlas.galvanek-bau.de"
+    },
+    {
+      "Role": "Backend Developer",
+      "Company": "Thomi Technology Solution",
+      "Date": "1/5/2026 – 1/10/2026",
+      "Descriptions": [
+        "Phát triển order management API bằng Java (<span class='underline'>Spring Boot</span>), bao quát việc tạo đơn, vòng đời trạng thái và lịch sử đơn hàng cho nền tảng logistics và giao hàng.",
+        "Triển khai chức năng ghép tài xế cho việc giao hàng bằng cách gán đơn cho tài xế gần nhất thông qua truy vấn không gian PostGIS.",
+        "Xây dựng module notification để gửi cập nhật trạng thái đơn hàng và giao hàng tới mobile app qua FCM.",
+        "Tích hợp backend service với mobile app và các hệ thống nội bộ qua REST API, tối ưu truy vấn bằng indexing và pagination."
+      ],
+      "Tags": ["Spring Boot", "PostGIS", "REST API", "PostgreSQL"],
+      "Link": "",
+      "LinkText": ""
+    }
+  ],
 
-    "OtherProjects.Title": "Dự án khác",
-    "OtherProjects.Projects": [
-        {
-            "Title": "Online Ordering Food",
-            "Description": "<span class='underline'>Backend REST API</span> cho nền tảng đặt đồ ăn trực tuyến — xử lý <span class='underline'>quản lý menu</span>, <span class='underline'>tùy chỉnh nguyên liệu</span>, <span class='underline'>xử lý đơn hàng</span> và <span class='underline'>theo dõi đơn hàng</span>, được xây dựng hoàn toàn bằng Spring Boot.",
-            "ghLink": "https://github.com/Lakeserl/Online-Order-Food",
-            "demoLink": "",
-            "Technologies": ["Spring Boot", "Java", "MySQL"]
-        },
-        {
-          "Title": "FastAPI CRUD engine",
-          "Description": "Một <span class='underline'>reusable CRUD engine</span> cho FastAPI — tự động hóa việc tạo REST endpoints với repository pattern, router scaffolding, filtering, pagination và permission. Hỗ trợ thêm các tính năng nâng cao như <span class='underline'>caching</span>, <span class='underline'>rate limiting</span>, <span class='underline'>webhooks</span> và audit hooks — giảm đáng kể boilerplate khi xây dựng API production.",
-          "ghLink": "https://github.com/Lakeserl/fastapi-crud-engine",
-          "demoLink": "",
-          "Technologies": ["FastAPI", "Python", "SQLAlchemy"]
-        }
-    ],
+  "Project.Title": "Dự án của tôi",
+  "Project.Label": "Dự án nổi bật",
+  "Project.Projects": [
+    {
+      "Title": "SignConnect – Nhận diện ngôn ngữ ký hiệu thời gian thực",
+      "Description": "Backend cho hệ thống nhận diện ngôn ngữ ký hiệu thời gian thực được xây dựng bằng <span class='underline'>FastAPI</span>, cung cấp API và WebSocket để tạo phụ đề trực tiếp trong cuộc gọi video.",
+      "imgs": [
+        "/images/signConnect/demo1.png",
+        "/images/signConnect/demo2.png",
+        "/images/signConnect/demo3.png"
+      ],
+      "ghLink": "https://github.com/Lakeserl/Graduation-Thesis",
+      "demoLink": "https://www.youtube.com/watch?v=D0aOYq8ERb0",
+      "Technologies": ["FastAPI", "WebSocket"]
+    },
+    {
+      "Title": "CalmSKIN – Nền tảng thương mại điện tử mỹ phẩm chăm sóc da",
+      "Description": "Backend thương mại điện tử mỹ phẩm được xây dựng trên kiến trúc <span class='underline'>microservices với Spring Boot 3</span>. Hệ thống cung cấp API bảo mật, định tuyến gateway, giao tiếp bất đồng bộ giữa các service, lưu trữ dữ liệu, caching và monitoring production, được đóng gói bằng Docker.",
+      "imgs": [
+        "./images/calmSkin/demo1.png",
+        "./images/calmSkin/demo2.png",
+        "./images/calmSkin/demo3.png",
+        "./images/calmSkin/demo4.png"
+      ],
+      "ghLink": "https://github.com/Lakeserl/CalmSkin",
+      "ghLinkFe": "https://github.com/Lakeserl/CalmSkin-fe",
+      "demoLink": "",
+      "Technologies": [
+        "Spring Boot 3",
+        "Spring Cloud",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "Prometheus & Grafana"
+      ]
+    }
+  ],
 
-    "Contact.Pretitle": "Và... tiếp theo là?",
-    "Contact.Title": "Kết nối với mình!",
-    "Contact.Content": "Mình đang mở cửa cho các cơ hội mới — dù là vị trí backend, dự án freelance, hay chỉ muốn trao đổi về công nghệ. Hộp thư của mình luôn mở!",
-    "Contact.Btn": "Liên hệ với mình"
+  "OtherProjects.Title": "Dự án khác",
+  "OtherProjects.Projects": [
+    {
+      "Title": "Online Ordering Food",
+      "Description": "<span class='underline'>Backend REST API</span> cho nền tảng đặt đồ ăn trực tuyến — xử lý <span class='underline'>quản lý menu</span>, <span class='underline'>tùy chỉnh nguyên liệu</span>, <span class='underline'>xử lý đơn hàng</span> và <span class='underline'>theo dõi đơn hàng</span>, được xây dựng hoàn toàn bằng Spring Boot.",
+      "ghLink": "https://github.com/Lakeserl/Online-Order-Food",
+      "demoLink": "",
+      "Technologies": ["Spring Boot", "Java", "MySQL"]
+    },
+    {
+      "Title": "FastAPI CRUD engine",
+      "Description": "Một <span class='underline'>reusable CRUD engine</span> cho FastAPI — tự động hóa việc tạo REST endpoints với repository pattern, router scaffolding, filtering, pagination và permission. Hỗ trợ thêm các tính năng nâng cao như <span class='underline'>caching</span>, <span class='underline'>rate limiting</span>, <span class='underline'>webhooks</span> và audit hooks — giảm đáng kể boilerplate khi xây dựng API production.",
+      "ghLink": "https://github.com/Lakeserl/fastapi-crud-engine",
+      "demoLink": "",
+      "Technologies": ["FastAPI", "Python", "SQLAlchemy"]
+    }
+  ],
+
+  "Contact.Pretitle": "Và... tiếp theo là?",
+  "Contact.Title": "Kết nối với mình!",
+  "Contact.Content": "Mình đang mở cửa cho các cơ hội mới — dù là vị trí backend, dự án freelance, hay chỉ muốn trao đổi về công nghệ. Hộp thư của mình luôn mở!",
+  "Contact.Btn": "Liên hệ với mình"
 }
