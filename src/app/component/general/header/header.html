@@ -4,169 +4,329 @@
 >
   <div class="container">
     <!--Logo-->
-    <a href="" class="navbar-brand text-light" [routerLink]="'inicio'">
+    <a class="navbar-brand text-light" [routerLink]="'/'">
       <img src="images/logo1.png" width="45" />
     </a>
     <!--Menu-->
     <ul class="menu-ul d-flex align-item-center mb-0">
-          <!-- About -->
-        <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")'>
-            <a class="nav-link" (click)='scroll("about")'>
-                <span class='nav-number'>01.</span>
-                <span class="underline nav-text">{{ "Header.Item1" | translate }}</span>
-            </a>
-        </li>
-        <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_experience", "menu", "click")'>
-            <a class="nav-link" (click)='scroll("education")'>
-                <span class='nav-number'>02.</span>
-                <span class="underline nav-text">{{ "Header.Item2" | translate }}</span>
-            </a>
-        </li>
-        <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_services", "menu", "click")'>
-            <a class="nav-link" (click)='scroll("services")'>
-                <span class='nav-number'>03.</span>
-                <span class="underline nav-text">{{ "Header.Item4" | translate }}</span>
-            </a>
-        </li>
-        <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_project", "menu", "click")'>
-            <a class="nav-link" (click)='scroll("project")'>
-                <span class='nav-number'>04.</span>
-                <span class="underline nav-text">{{ "Header.Item3" | translate }}</span>
-            </a>
-        </li>
-        <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_contact", "menu", "click")'>
-            <a class="nav-link" (click)='scroll("contact")'>
-                <span class='nav-number'>05.</span>
-                <span class="underline nav-text">{{ "Header.Item5" | translate }}</span>
-            </a>
-        </li>
-        <li class="nav-items">
-            <a (click)="downloadCV()" class="main-btn cv-btn">
-                <span>{{ "Header.cvBtn" | translate }}</span>
-            </a>
-        </li>
-        <li class="nav-items">
-            <div class="dropdown d-inline-block" [class.show]="dropdownOpen">
-                <a class="language-container btn btn-secondary dropdown-toggle"     
-                        (click)="toggleDropdown()"
-                        [attr.aria-expanded]="dropdownOpen">
-                    @if (languageFormControl.value === "en") {
-                        <img src="images/flagUK.png" alt="English" width="20px">
-                        <span class="flag-text">English</span>
-                    }
-                    @if (languageFormControl.value === "vi"){
-                        <img src="images/flagVietNam.png" alt="VietNam" width="20px">
-                        <span class="flag-text">VietNam</span>
-                    }
-                    @if (languageFormControl.value !== 'en' && languageFormControl.value !== 'vi') {
-                        <span class="dropdown-label">Language</span>
-                    }
-
-                </a>
-                <ul class="dropdown-menu" [class.show]="dropdownOpen">
-                    <li (click)='selectLanguage("vi")' 
-                        class="language-container language-container-selector" 
-                        [class.active]='languageFormControl.value == "vi"'>
-                        <img width="20px" src="images/flagVietNam.png" alt="VietNam">
-                        <span class="flag-text">VietNam</span>
-                        <svg *ngIf="languageFormControl.value == 'vi'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                        </svg>
-                    </li>
-                    <li (click)='selectLanguage("en")' 
-                        class="language-container language-container-selector" 
-                        [class.active]='languageFormControl.value == "en"'>
-                        <img width="20px" src="images/flagUK.png" alt="English">
-                        <span class="flag-text">English</span>
-                        <svg *ngIf="languageFormControl.value == 'en'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                        </svg>
-                    </li>
-                </ul>
-           </div>
-        </li>
+      <!-- About -->
+      <li
+        class="nav-item"
+        (click)="
+          analyticsService.sendAnalyticEvent('click_about', 'menu', 'click')
+        "
+      >
+        <a class="nav-link" (click)="scroll('about')">
+          <span class="nav-number">01.</span>
+          <span class="underline nav-text">{{
+            "Header.Item1" | translate
+          }}</span>
+        </a>
+      </li>
+      <li
+        class="nav-item"
+        (click)="
+          analyticsService.sendAnalyticEvent(
+            'click_experience',
+            'menu',
+            'click'
+          )
+        "
+      >
+        <a class="nav-link" (click)="scroll('education')">
+          <span class="nav-number">02.</span>
+          <span class="underline nav-text">{{
+            "Header.Item2" | translate
+          }}</span>
+        </a>
+      </li>
+      <li
+        class="nav-item"
+        (click)="
+          analyticsService.sendAnalyticEvent('click_services', 'menu', 'click')
+        "
+      >
+        <a class="nav-link" (click)="scroll('services')">
+          <span class="nav-number">03.</span>
+          <span class="underline nav-text">{{
+            "Header.Item4" | translate
+          }}</span>
+        </a>
+      </li>
+      <li
+        class="nav-item"
+        (click)="
+          analyticsService.sendAnalyticEvent('click_project', 'menu', 'click')
+        "
+      >
+        <a class="nav-link" (click)="scroll('project')">
+          <span class="nav-number">04.</span>
+          <span class="underline nav-text">{{
+            "Header.Item3" | translate
+          }}</span>
+        </a>
+      </li>
+      <li
+        class="nav-item"
+        (click)="
+          analyticsService.sendAnalyticEvent('click_contact', 'menu', 'click')
+        "
+      >
+        <a class="nav-link" (click)="scroll('contact')">
+          <span class="nav-number">05.</span>
+          <span class="underline nav-text">{{
+            "Header.Item5" | translate
+          }}</span>
+        </a>
+      </li>
+      <li class="nav-items">
+        <div class="dropdown d-inline-block" [class.show]="dropdownOpen">
+          <a
+            class="language-container btn btn-secondary dropdown-toggle"
+            (click)="toggleDropdown()"
+            [attr.aria-expanded]="dropdownOpen"
+          >
+            @if (languageFormControl.value === "en") {
+              <img src="images/flagUK.png" alt="English" width="20px" />
+              <span class="flag-text">English</span>
+            }
+            @if (languageFormControl.value === "vi") {
+              <img src="images/flagVietNam.png" alt="VietNam" width="20px" />
+              <span class="flag-text">VietNam</span>
+            }
+            @if (
+              languageFormControl.value !== "en" &&
+              languageFormControl.value !== "vi"
+            ) {
+              <span class="dropdown-label">Language</span>
+            }
+          </a>
+          <ul class="dropdown-menu" [class.show]="dropdownOpen">
+            <li
+              (click)="selectLanguage('vi')"
+              class="language-container language-container-selector"
+              [class.active]="languageFormControl.value == 'vi'"
+            >
+              <img width="20px" src="images/flagVietNam.png" alt="VietNam" />
+              <span class="flag-text">VietNam</span>
+              <svg
+                *ngIf="languageFormControl.value == 'vi'"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-check2 arrow-active"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                />
+              </svg>
+            </li>
+            <li
+              (click)="selectLanguage('en')"
+              class="language-container language-container-selector"
+              [class.active]="languageFormControl.value == 'en'"
+            >
+              <img width="20px" src="images/flagUK.png" alt="English" />
+              <span class="flag-text">English</span>
+              <svg
+                *ngIf="languageFormControl.value == 'en'"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-check2 arrow-active"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                />
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </li>
     </ul>
     <div class="menu-wrapper">
-        <div [class.animate]='responsiveMenuVisible' (click)='responsiveMenuVisible = !responsiveMenuVisible' class="hamburger-menu"></div>
+      <div
+        [class.animate]="responsiveMenuVisible"
+        (click)="responsiveMenuVisible = !responsiveMenuVisible"
+        class="hamburger-menu"
+      ></div>
     </div>
-    <div class="menu-responsive" [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }">
-        <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.pageYPosition>0' class="on-top">
-            <nav>
-                <ol>
-                    <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")'>
-                        <a class="nav-link" (click)='scroll("about")'>
-                            <span class='nav-number'>01.</span>
-                            <span class="underline nav-text">{{ "Header.Item1" | translate }}</span>
-                        </a>
-                    </li>
-                    <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_experience", "menu", "click")'>
-                        <a class="nav-link" (click)='scroll("education")'>
-                            <span class='nav-number'>02.</span>
-                            <span class="underline nav-text">{{ "Header.Item2" | translate }}</span>
-                        </a>
-                    </li>
-                    <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_services", "menu", "click")'>
-                        <a class="nav-link" (click)='scroll("services")'>
-                            <span class='nav-number'>03.</span>
-                            <span class="underline nav-text">{{ "Header.Item4" | translate }}</span>
-                        </a>
-                    </li>
-                    <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_project", "menu", "click")'>
-                        <a class="nav-link" (click)='scroll("project")'>
-                            <span class='nav-number'>04.</span>
-                            <span class="underline nav-text">{{ "Header.Item3" | translate }}</span>
-                        </a>
-                    </li>
-                    <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_contact", "menu", "click")'>
-                        <a class="nav-link" (click)='scroll("contact")'>
-                            <span class='nav-number'>05.</span>
-                            <span class="underline nav-text">{{ "Header.Item4" | translate }}</span>
-                        </a>
-                    </li>
-                    <li class="nav-items">
-                        <a (click)="downloadCV()" class="main-btn cv-btn">
-                            {{"Header.cvBtn" | translate}}
-                        </a>
-                    </li>
-                    <li class="nav-items">
-                        <div class="dropdown d-inline-block" [class.show]="responsiveDropdownOpen">
-                            <a class="language-container btn btn-secondary dropdown-toggle"     
-                                    (click)="toggleResponsiveDropdown()"
-                                    [attr.aria-expanded]="responsiveDropdownOpen">
-                                @if (languageFormControl.value === "en") {
-                                    <img src="images/flagUK.png" alt="English" width="20px">
-                                    <span class="flag-text">English</span>
-                                }
-                                @if (languageFormControl.value === "vi"){
-                                    <img src="images/flagVietNam.png" alt="VietNam" width="20px">
-                                    <span class="flag-text">VietNam</span>
-                                }
-                            </a>
-                            <ul class="dropdown-menu" [class.show]="responsiveDropdownOpen">
-                                <li (click)='selectLanguage("vi")' 
-                                    class="language-container language-container-selector" 
-                                    [class.active]='languageFormControl.value == "vi"'>
-                                    <img width="20px" src="images/flagVietNam.png" alt="VietNam">
-                                    <span class="flag-text">VietNam</span>
-                                    <svg *ngIf="languageFormControl.value == 'vi'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                </li>
-                                <li (click)='selectLanguage("en")' 
-                                    class="language-container language-container-selector" 
-                                    [class.active]='languageFormControl.value == "en"'>
-                                    <img width="20px" src="images/flagUK.png" alt="English">
-                                    <span class="flag-text">English</span>
-                                    <svg *ngIf="languageFormControl.value == 'en'" xmlns="http://www.w3.svg/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 arrow-active" viewBox="0 0 16 16">
-                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ol>
-            </nav>
-        </aside>
+    <div
+      class="menu-responsive"
+      [ngStyle]="{ 'pointer-events': !responsiveMenuVisible ? 'none' : '' }"
+    >
+      <aside
+        [class.aside-show]="responsiveMenuVisible"
+        [class.nav-shadow]="this.pageYPosition > 0"
+        class="on-top"
+      >
+        <nav>
+          <ol>
+            <li
+              class="nav-item"
+              (click)="
+                analyticsService.sendAnalyticEvent(
+                  'click_about',
+                  'menu',
+                  'click'
+                )
+              "
+            >
+              <a class="nav-link" (click)="scroll('about')">
+                <span class="nav-number">01.</span>
+                <span class="underline nav-text">{{
+                  "Header.Item1" | translate
+                }}</span>
+              </a>
+            </li>
+            <li
+              class="nav-item"
+              (click)="
+                analyticsService.sendAnalyticEvent(
+                  'click_experience',
+                  'menu',
+                  'click'
+                )
+              "
+            >
+              <a class="nav-link" (click)="scroll('education')">
+                <span class="nav-number">02.</span>
+                <span class="underline nav-text">{{
+                  "Header.Item2" | translate
+                }}</span>
+              </a>
+            </li>
+            <li
+              class="nav-item"
+              (click)="
+                analyticsService.sendAnalyticEvent(
+                  'click_services',
+                  'menu',
+                  'click'
+                )
+              "
+            >
+              <a class="nav-link" (click)="scroll('services')">
+                <span class="nav-number">03.</span>
+                <span class="underline nav-text">{{
+                  "Header.Item4" | translate
+                }}</span>
+              </a>
+            </li>
+            <li
+              class="nav-item"
+              (click)="
+                analyticsService.sendAnalyticEvent(
+                  'click_project',
+                  'menu',
+                  'click'
+                )
+              "
+            >
+              <a class="nav-link" (click)="scroll('project')">
+                <span class="nav-number">04.</span>
+                <span class="underline nav-text">{{
+                  "Header.Item3" | translate
+                }}</span>
+              </a>
+            </li>
+            <li
+              class="nav-item"
+              (click)="
+                analyticsService.sendAnalyticEvent(
+                  'click_contact',
+                  'menu',
+                  'click'
+                )
+              "
+            >
+              <a class="nav-link" (click)="scroll('contact')">
+                <span class="nav-number">05.</span>
+                <span class="underline nav-text">{{
+                  "Header.Item5" | translate
+                }}</span>
+              </a>
+            </li>
+            <li class="nav-items">
+              <div
+                class="dropdown d-inline-block"
+                [class.show]="responsiveDropdownOpen"
+              >
+                <a
+                  class="language-container btn btn-secondary dropdown-toggle"
+                  (click)="toggleResponsiveDropdown()"
+                  [attr.aria-expanded]="responsiveDropdownOpen"
+                >
+                  @if (languageFormControl.value === "en") {
+                    <img src="images/flagUK.png" alt="English" width="20px" />
+                    <span class="flag-text">English</span>
+                  }
+                  @if (languageFormControl.value === "vi") {
+                    <img
+                      src="images/flagVietNam.png"
+                      alt="VietNam"
+                      width="20px"
+                    />
+                    <span class="flag-text">VietNam</span>
+                  }
+                </a>
+                <ul class="dropdown-menu" [class.show]="responsiveDropdownOpen">
+                  <li
+                    (click)="selectLanguage('vi')"
+                    class="language-container language-container-selector"
+                    [class.active]="languageFormControl.value == 'vi'"
+                  >
+                    <img
+                      width="20px"
+                      src="images/flagVietNam.png"
+                      alt="VietNam"
+                    />
+                    <span class="flag-text">VietNam</span>
+                    <svg
+                      *ngIf="languageFormControl.value == 'vi'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check2 arrow-active"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                      />
+                    </svg>
+                  </li>
+                  <li
+                    (click)="selectLanguage('en')"
+                    class="language-container language-container-selector"
+                    [class.active]="languageFormControl.value == 'en'"
+                  >
+                    <img width="20px" src="images/flagUK.png" alt="English" />
+                    <span class="flag-text">English</span>
+                    <svg
+                      *ngIf="languageFormControl.value == 'en'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check2 arrow-active"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </aside>
     </div>
   </div>
 </nav>

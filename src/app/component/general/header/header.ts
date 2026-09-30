@@ -3,51 +3,54 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { LanguageService } from '../../../service/language/language-service';
 import { AnalyticsService } from '../../../service/analytic/analytics-service';
+import { LanguageService } from '../../../service/language/language-service';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule, TranslateModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TranslateModule,
+  ],
   templateUrl: './header.html',
-  styleUrl: './header.scss'
+  styleUrl: './header.scss',
 })
-export class Header implements OnInit{
-  responsiveMenuVisible: Boolean = false;
+export class Header implements OnInit {
+  responsiveMenuVisible = false;
   pageYPosition: number = 0;
-  languageFormControl: FormControl = new FormControl();
-  cvName: string = "";
+  languageFormControl = new FormControl<'vi' | 'en'>('en', {
+    nonNullable: true,
+  });
   dropdownOpen: boolean = false;
   responsiveDropdownOpen: boolean = false;
 
-  constructor( 
+  constructor(
     private router: Router,
     public analyticsService: AnalyticsService,
-    public languageService: LanguageService
-  ){}
+    public languageService: LanguageService,
+  ) {}
 
   ngOnInit(): void {
-    this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))
-    this.languageFormControl.setValue(this.languageService.language);
+    this.languageFormControl.valueChanges.subscribe((val) =>
+      this.languageService.changeLanguage(val),
+    );
+    this.languageFormControl.setValue(this.languageService.language());
   }
 
   scroll(el: any) {
-    if(document.getElementById(el)){
-      document.getElementById(el)?.scrollIntoView({behavior: 'smooth'});
-    }else{
-      this.router.navigate(['/home']).then(() => document.getElementById(el)?.scrollIntoView({behavior: 'smooth'}));
+    if (document.getElementById(el)) {
+      document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      this.router
+        .navigate(['/'])
+        .then(() =>
+          document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' }),
+        );
     }
-    this.responsiveMenuVisible=false;
-  }
-
-  downloadCV(){
-    this.languageService.translateService.get("Header.cvName").subscribe(val => {
-      this.cvName = val
-      console.log(val)
-
-      let url = window.location.href;
-      window.open(`/cv/${this.cvName}`, "_blank");
-    })
+    this.responsiveMenuVisible = false;
   }
 
   toggleDropdown() {
@@ -58,7 +61,7 @@ export class Header implements OnInit{
     this.responsiveDropdownOpen = !this.responsiveDropdownOpen;
   }
 
-  selectLanguage(language: string) {
+  selectLanguage(language: 'vi' | 'en') {
     this.languageFormControl.setValue(language);
     this.dropdownOpen = false;
     this.responsiveDropdownOpen = false;
@@ -75,9 +78,5 @@ export class Header implements OnInit{
       this.dropdownOpen = false;
       this.responsiveDropdownOpen = false;
     }
-  }
-
-  changeLanguage(language: string) {
-    this.languageFormControl.setValue(language);
   }
 }
