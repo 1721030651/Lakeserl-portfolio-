@@ -1,0 +1,35 @@
+<section class="section about" id="about">
+    <div class="container">
+        <div class="section-box">
+            <div class="about-title">
+                <h3 class="section-title">
+                    <span class="n-section-title">1.</span> {{"AboutMe.Title" | translate}}
+                </h3>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 mb-4 md-md-0">
+                    <div class="about-description">
+                        @for (text of ("AboutMe.Paragraphs" | translate); track $index) {
+                        <p [innerHTML]="text"></p>
+                        }
+                        <ul class="skills-list">
+                            <li class="skill-element"><span class="underline">Spring Boot (Java / Kotlin)</span></li>
+                            <li class="skill-element"><span class="underline">FastAPI &amp; Python</span></li>
+                            <li class="skill-element"><span class="underline">Angular &amp; TypeScript</span></li>
+                            <li class="skill-element"><span class="underline">Kotlin Android</span></li>
+                            <li class="skill-element"><span class="underline">PostgreSQL / MySQL</span></li>
+                            <li class="skill-element"><span class="underline">Docker &amp; CI/CD</span></li>
+                            <li class="skill-element"><span class="underline">AWS &amp; Observability</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mt-4 mt-md-0 text-center">
+                    <div class="about-img-container">
+                        <img (click)='analyticsService.sendAnalyticEvent("click_image", "about", "image")'
+                            width="auto" height="auto" src="images/image.png" alt="Vũ Đình Lâm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

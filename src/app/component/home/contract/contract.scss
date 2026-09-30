@@ -1,0 +1,131 @@
+@use "./../../../../variables.scss" as *; 
+
+.contact{
+
+    position: relative;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100vh;
+    display: table;
+    overflow: hidden;
+
+    .container{
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        z-index: 1;
+    }
+    .contact-title{
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        white-space: nowrap;
+        font-size: 60px;
+        font-weight: 600;
+        color: $LightestSlate;
+        margin: auto;
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+     .contact-pre-title{
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 10px 0 40px;
+        width: 100%;
+        white-space: nowrap;
+        font-size: 32px;
+        display: block;
+        color: $Green;
+        font-size: 16px;
+        font-family: $CodeFont;
+        font-weight: normal;
+        margin-bottom: 20px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+     .div-btn-contract {
+            height: 43px;
+                .main-btn {
+                    outline: none;
+                    position: relative;
+                    z-index: 0;
+                    border-radius: 10px;
+                }
+
+                .main-btn::before {
+                    content: '';
+                    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+                    position: absolute;
+                    top: -2px;
+                    left:-2px;
+                    background-size: 400%;
+                    z-index: -1;
+                    filter: blur(5px);
+                    width: calc(100% + 4px);
+                    height: calc(100% + 4px);
+                    animation: glowing 20s linear infinite;
+                    opacity: 0;
+                    transition: opacity .3s ease-in-out;
+                    border-radius: 10px;
+                }
+
+                .main-btn:active {
+                    color: $Navy;
+                }
+
+                .main-btn:active:hover{
+                    background: transparent;
+                }
+                .main-btn:hover::before{
+                    opacity: 1;
+                }
+                .main-btn::after {
+                    z-index: -1;
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: #111;
+                    left: 0;
+                    top: 0;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+
+@media (max-width: 768px){
+    
+    .contact{
+        height: 100vh;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        display: table;
+
+        .container{
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}

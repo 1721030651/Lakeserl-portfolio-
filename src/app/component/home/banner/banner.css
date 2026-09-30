@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+.banner {
+  min-height: 100vh;
+}
+.banner .container {
+  display: table;
+  height: 100vh;
+}
+.banner .container .section-box-banner {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner .container .section-box-banner .content {
+  margin-top: 98px;
+}
+.banner .container .section-box-banner .banner-pretitle h1 {
+  color: #64ffda;
+  margin: 0 0 20px 3px;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
+}
+.banner .container .section-box-banner .banner-name {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 1.1;
+  margin: 0;
+  font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+  color: #ccd6f6;
+}
+.banner .container .section-box-banner .banner-subtitle {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 1.1;
+  margin: 0;
+  font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+  color: #8892b0;
+}
+.banner .container .section-box-banner .banner-description {
+  margin-bottom: 70px;
+}
+.banner .container .section-box-banner .banner-description p {
+  max-width: 500px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.banner .container .section-box-banner .div-btn-banner {
+  height: 43px;
+}
+.banner .container .section-box-banner .div-btn-banner .main-btn {
+  outline: none;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+.banner .container .section-box-banner .div-btn-banner .main-btn::before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.banner .container .section-box-banner .div-btn-banner .main-btn:active {
+  color: #0a192f;
+}
+.banner .container .section-box-banner .div-btn-banner .main-btn:active:hover {
+  background: transparent;
+}
+.banner .container .section-box-banner .div-btn-banner .main-btn:hover::before {
+  opacity: 1;
+}
+.banner .container .section-box-banner .div-btn-banner .main-btn::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}/*# sourceMappingURL=banner.css.map */

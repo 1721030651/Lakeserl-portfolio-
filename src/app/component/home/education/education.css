@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* You can add global styles to this file, and also import other style files */
+.education {
+  max-width: 700px;
+  margin: auto;
+}
+.education .title-tab-content {
+  Color: #ccd6f6;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.education .education-time {
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: #ccd6f6;
+  margin-bottom: 20px;
+}
+.education .education-description {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.education .education-description:before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+}
+
+.education .education-tabs {
+  display: flex;
+}
+.education .education-tabs .tab-content {
+  margin-left: 40px;
+}
+.education .education-tabs ul {
+  display: block;
+  width: 140px;
+  border: none;
+}
+.education .education-tabs li {
+  border-left: 2px solid #303C55;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: rgb(48, 60, 85);
+}
+.education .education-tabs a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  height: 42px;
+  padding: 0 20px 2px;
+  text-align: left;
+  white-space: nowrap;
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
+  font-size: 14px;
+  color: #8892b0;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+}
+.education .education-tabs a.active {
+  background-color: #112240 !important;
+  color: #64ffda !important;
+  border-color: transparent !important;
+}
+.education .education-tabs a:hover {
+  background-color: #112240 !important;
+  color: #64ffda !important;
+  border-color: transparent !important;
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding-top: 30px;
+  }
+  .education .education-description {
+    padding: 0;
+    font-size: 15px;
+  }
+  .education .title-tab-content {
+    font-size: 18px;
+  }
+  ::ng-deep .education-tabs {
+    display: block !important;
+  }
+  ::ng-deep .education-tabs .tab-content {
+    margin-left: 0 !important;
+    margin-top: 20px;
+  }
+  ::ng-deep .education-tabs ul {
+    display: flex !important;
+    flex-wrap: wrap;
+    width: 100% !important;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  ::ng-deep .education-tabs ul li {
+    border-left: none;
+    border-bottom: 2px solid #303C55;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  ::ng-deep .education-tabs ul li a {
+    font-size: 12px;
+    padding: 6px 12px;
+    min-width: 80px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=education.css.map */

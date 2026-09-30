@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+footer {
+  color: #a8b2d1;
+}
+footer .container > * {
+  opacity: 0;
+  animation: footerEnter 0.25s cubic-bezier(0.35, 0, 0.25, 1) forwards;
+  animation-delay: calc(var(--stagger-index) * 50ms);
+  overflow: visible;
+}
+footer .footer-left-bar:after, footer .footer-right-bar:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0 auto;
+  background-color: #a8b2d1;
+}
+footer .footer-left-bar li, footer .footer-right-bar li {
+  list-style: none;
+}
+footer .footer-left-bar {
+  position: fixed;
+  bottom: -16px;
+  left: 51px;
+  padding: 0;
+}
+footer .footer-left-bar i {
+  font-size: 19px;
+  color: #a8b2d1;
+}
+footer .footer-left-bar li {
+  margin: 20px 0px;
+}
+footer .footer-left-bar li:last-of-type {
+  margin-bottom: 33px;
+}
+footer .footer-right-bar {
+  position: fixed;
+  bottom: 0px;
+  right: 41px;
+  padding: 0;
+}
+footer .footer-right-bar li {
+  transform: rotate(90deg);
+}
+footer .footer-right-bar a {
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
+  font-size: 12px;
+  -webkit-letter-spacing: 0.1em;
+  -moz-letter-spacing: 0.1em;
+  -ms-letter-spacing: 0.1em;
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+  margin: 20px auto;
+  padding: 10px;
+  color: #a8b2d1;
+}
+footer .footer-credits {
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
+  font-size: 12px;
+  line-height: 1;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+footer .footer-credits a {
+  color: #a8b2d1;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 0s;
+}
+footer .footer-credits a:hover, footer .footer-credits a:focus {
+  text-decoration: none;
+  color: #64ffda;
+}
+
+@keyframes footerEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,103 @@
+@use "./../../../../variables.scss" as *;
+
+    .services-container{
+        margin: 70px 0 200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        .services-card {
+            background: $LightNavy;
+            padding: 3rem 4rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            
+            h3 {
+                color: $LightestSlate;
+                font-weight: 500;
+                margin: 0px;
+                font-size: 30px;
+            }
+
+            p {
+                color: $Slate;
+                line-height: 1.1;
+                font-weight: 400; 
+            }
+        }
+
+        .services-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 
+            0 20px 40px rgba(100, 255, 218, 0.15),
+            0 10px 20px rgba(100, 255, 218, 0.1),
+            0 0 30px rgba(100, 255, 218, 0.08);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .services-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 50px;
+
+            .services-card {
+                padding: 2.5rem 3rem;
+
+                h3 {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .services-container {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 40px;
+
+            .services-card {
+                padding: 2rem 1.5rem;
+
+                h3 {
+                    font-size: 24px;
+                }
+
+                p {
+                    line-height: 1.5;
+                    font-size: 15px;
+                }
+            }
+
+            .services-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 
+                    0 15px 30px rgba(100, 255, 218, 0.12),
+                    0 8px 15px rgba(100, 255, 218, 0.08),
+                    0 0 20px rgba(100, 255, 218, 0.06);
+            }
+        }
+    }
+
+@media (max-width: 480px) {
+    .services-container {
+        margin-top: 30px;
+        gap: 1rem;
+
+        .services-card {
+            padding: 1.5rem 1rem;
+            gap: 1.5rem;
+
+            h3 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}

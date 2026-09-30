@@ -1,0 +1,52 @@
+@use './../../../../variables.scss' as *;
+
+.more-project {
+  .more-project-box {
+    background-color: $LightNavy;
+    border-radius: 6px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: all 0.25s cubic-bezier(.645,.045,.355,1);
+    display: flex;
+    flex-direction: column; 
+    cursor: pointer;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -20px rgba(2,12,27,0.7);
+    }
+
+    .other-project-icons {
+        color: $LightSlate;
+        size: 2px;
+    }
+
+    .other-project-title {
+      font-size: 20px;
+      color: $LightestSlate;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .other-project-description {
+      font-size: 15px;
+      color: $LightSlate;
+      margin-bottom: 1rem;
+    }
+
+    .more-projects-skills {
+      margin-top: auto; 
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+
+      li {
+        font-size: 13px;
+        color: $Green;
+        font-family: $CodeFont;
+      }
+    }
+  }
+}

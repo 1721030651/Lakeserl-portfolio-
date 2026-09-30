@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+:host {
+  background-color: #0a192f;
+  min-height: 100vh;
+  display: block;
+}
+
+.app-content {
+  background-color: #0a192f;
+  min-height: 100vh;
+}/*# sourceMappingURL=app.css.map */

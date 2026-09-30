@@ -1,0 +1,322 @@
+/* You can add global styles to this file, and also import other style files */
+/* ---------- Header / Navbar ---------- */
+.main-navbar {
+  height: 70px;
+  background: #0a192f;
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
+  animation: FadeIn 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  /* Menu list */
+  /* Dropdown Styles */
+  /* ---------- Responsive menu (aside) ---------- */
+  /* when aside shown */
+  /* make menu-responsive active when aside visible */
+  /* inside aside nav list */
+}
+.main-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 40px;
+}
+.main-navbar .menu-ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: auto;
+  margin-right: 10px;
+  /* fix first/last margin */
+}
+.main-navbar .menu-ul li {
+  margin: 0 13px;
+}
+.main-navbar .menu-ul li:first-child {
+  margin-left: 0;
+}
+.main-navbar .menu-ul li:last-child {
+  margin-right: 0;
+}
+.main-navbar .menu-ul .nav-item .nav-link {
+  padding: 5px 0;
+  color: #ccd6f6;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+.main-navbar .menu-ul .nav-item .nav-link:hover {
+  color: #64ffda;
+}
+.main-navbar .menu-ul .nav-items {
+  display: inline-flex;
+  align-items: center;
+}
+.main-navbar .menu-ul .nav-number {
+  color: #64ffda;
+  font-size: 12px;
+  margin-right: 6px;
+}
+.main-navbar .menu-ul .nav-text {
+  color: #ccd6f6 !important;
+  padding-bottom: 4px;
+}
+.main-navbar .cv-btn {
+  font-size: 12px;
+  padding: 7px 15px !important;
+  border-radius: 4px;
+  border: 1px solid #64ffda;
+  color: #64ffda;
+  background: transparent;
+  transition: all 0.18s ease;
+  text-decoration: none;
+}
+.main-navbar .cv-btn:hover {
+  background: #64ffda;
+  color: #0a192f;
+}
+.main-navbar .language-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  padding: 4px 10px;
+  min-width: 110px;
+  height: 36px;
+  border-radius: 6px;
+  background: transparent;
+  color: #e6f1ff;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+.main-navbar .language-container:hover {
+  border-color: #64ffda;
+}
+.main-navbar .language-container img {
+  width: 20px;
+  height: 14px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: inline-block;
+}
+.main-navbar .language-container .flag-text {
+  color: inherit;
+  margin: 0 8px;
+  font-size: 13px;
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, Monospace;
+  white-space: nowrap;
+}
+.main-navbar .language-container::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  margin-left: auto;
+}
+.main-navbar .dropdown {
+  position: relative;
+}
+.main-navbar .dropdown .dropdown-label {
+  margin-left: 8px;
+  font-size: 13px;
+  color: #ccd6f6;
+  white-space: nowrap;
+}
+.main-navbar .dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 160px;
+  padding: 8px 0;
+  margin: 2px 0 0;
+  font-size: 13px;
+  text-align: left;
+  background-color: #112240;
+  border: 1px solid #64ffda;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  animation: FadeInDropdown 0.15s ease-out;
+}
+.main-navbar .dropdown .dropdown-menu.show {
+  display: block;
+}
+.main-navbar .dropdown .dropdown-menu li {
+  margin: 0 !important;
+  padding: 0;
+}
+.main-navbar .dropdown .dropdown-menu .language-container-selector {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  margin: 0;
+  color: #ccd6f6;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: 100%;
+  min-width: auto;
+  height: auto;
+  transition: background-color 0.15s ease;
+}
+.main-navbar .dropdown .dropdown-menu .language-container-selector:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: #e6f1ff;
+}
+.main-navbar .dropdown .dropdown-menu .language-container-selector.active {
+  background-color: rgba(100, 255, 218, 0.2);
+  color: #64ffda;
+}
+.main-navbar .dropdown .dropdown-menu .language-container-selector img {
+  margin-right: 8px;
+}
+.main-navbar .dropdown .dropdown-menu .language-container-selector .flag-text {
+  margin: 0;
+  flex: 1;
+}
+.main-navbar .dropdown .dropdown-menu .language-container-selector .arrow-active {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+}
+.main-navbar .dropdown .dropdown-menu .language-container-selector::after {
+  display: none;
+}
+.main-navbar .dropdown.show .language-container {
+  border-color: #64ffda;
+  background-color: rgba(100, 255, 218, 0.1);
+}
+.main-navbar .menu-responsive {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  pointer-events: none;
+  visibility: hidden;
+}
+.main-navbar aside {
+  width: 75vw;
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #112240;
+  height: 100%;
+  position: relative;
+  right: -100%;
+  padding: 25px;
+  box-shadow: rgba(2, 12, 27, 0.7) -10px 0px 30px -15px;
+  transition: right 250ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms ease;
+  opacity: 0;
+  /* Responsive dropdown styles inside aside */
+}
+.main-navbar aside .dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  background-color: rgba(17, 34, 64, 0.5);
+  margin: 8px 0;
+  border-radius: 4px;
+}
+.main-navbar aside .dropdown .dropdown-menu.show {
+  display: block;
+}
+.main-navbar .aside-show {
+  right: 0;
+  opacity: 1;
+}
+.main-navbar .menu-responsive[ngstyle] { /* fallback, keep default hidden */ }
+.main-navbar aside nav ol {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.main-navbar aside nav ol li {
+  font-size: 16px;
+  margin: 0 auto 12px;
+}
+.main-navbar aside nav ol li a {
+  display: inline-block;
+  color: inherit;
+  width: 100%;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+.main-navbar aside nav ol li span {
+  display: block;
+  color: #64ffda;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* top fixed helper */
+.on-top {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  height: 100px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* nav shadow */
+.nav-shadow {
+  height: 70px;
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  transition: all 0.25s ease;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 1000px) {
+  .main-navbar .nav-link {
+    margin: 0;
+    padding: 0.5rem 0.7rem;
+  }
+}
+@media (max-width: 827px) {
+  /* hide desktop menu, show hamburger + responsive */
+  .main-navbar .menu-ul {
+    display: none !important;
+  }
+  .menu-wrapper, .menu-responsive {
+    display: block;
+  }
+}
+/* ---------- animations ---------- */
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes FadeInDropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) scaleY(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}/*# sourceMappingURL=header.css.map */

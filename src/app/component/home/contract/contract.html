@@ -1,0 +1,20 @@
+<section class="section contact" id="contract">
+    <div class="container">
+        <div class="section-box">
+            <div class="mb-4 fadeUp">
+                <h3 class="contact-pre-title big-subtitle">6. {{"Contact.Pretitle" | translate}}</h3>
+                <h4 class="e-font contact-title big-title">
+                    {{"Contact.Title" | translate}}
+                </h4>
+            </div>
+            <p class="fadeUp">
+                {{"Contact.Content" | translate}}
+            </p>
+            <div class="div-btn-contract mt-5">
+                <a (click)='analyticsService.sendAnalyticEvent("click_send_mail", "contact", "email")' href="mailto:dinhlam18112003@gmail.com" target="_blank" class="main-btn fadeUp" class="main-btn">
+                    {{"Contact.Btn" | translate}}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

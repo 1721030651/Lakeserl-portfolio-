@@ -1,0 +1,101 @@
+<section class="section project" id="project">
+  <div class="container">
+    <div class="section-box">
+      <div class="fade-up">
+        <h3 class="section-title">
+          <span class="n-section-title">4.</span>
+          {{ "Project.Title" | translate }}
+        </h3>
+      </div>
+
+      @for (project of "Project.Projects" | translate; track project; let i = $index) {
+      <div class="d-flex project-container fade-up">
+
+        @if (i % 2 == 0) {
+          <div id="carousel{{i}}" class="carousel slide w-50" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+              @for (img of project.imgs; track img; let j = $index) {
+                <div class="carousel-item" [class.active]="j === 0">
+                  <div class="img-container">
+                    <img class="img-feature-project rounded d-block w-100"
+                         [src]="img"
+                         [alt]="project.Title" />
+                  </div>
+                </div>
+              }
+            </div>
+
+            <div class="carousel-indicators">
+              @for (img of project.imgs; track img; let j = $index) {
+                <button type="button"
+                        attr.data-bs-target="#carousel{{i}}"
+                        [attr.data-bs-slide-to]="j"
+                        [class.active]="j === 0"
+                        [attr.aria-label]="'Slide ' + (j + 1)">
+                </button>
+              }
+            </div>
+          </div>
+        }
+
+        <div class="h-100"
+             [class.project-info-right]="i % 2 == 0"
+             [class.project-info-left]="i % 2 != 0">
+          <div class="project-box">
+            <h4 [class.text-right]="i%2==0" [class.text-left]="i%2!=0" class="feature-project">
+              {{"Project.Label" | translate}}
+            </h4>
+            <h5 [class.text-right]="i%2==0" [class.text-left]="i%2!=0" class="project-name">
+              {{project.Title}}
+            </h5>
+
+            <div class="project-description-box">
+              <p class="mb-0" [innerHTML]="project.Description"></p>
+            </div>
+
+            <ul class="project-skills">
+              @for (tech of project.Technologies; track $index) {
+                <li class="ml-3"><span class="underline technology">{{tech}}</span></li>
+              }
+            </ul>
+
+            <div class="project-links" [class.text-right]="i%2==0" [class.text-left]="i%2!=0">
+              <a *ngIf="project['ghLink'] && !project['ghLinkFe']" [href]="project['ghLink']" target="_blank"><i class="ml-3 fab fa-github"></i></a>
+              <a *ngIf="project['ghLink'] && project['ghLinkFe']" [href]="project['ghLink']" target="_blank" class="project-link-with-text"><i class="ml-3 fab fa-github"></i> BE</a>
+              <a *ngIf="project['ghLinkFe']" [href]="project['ghLinkFe']" target="_blank" class="project-link-with-text"><i class="ml-3 fab fa-github"></i> FE</a>
+              <a *ngIf="project['demoLink']" [href]="project['demoLink']" target="_blank"><i class="ml-3 fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+
+        @if (i % 2 != 0) {
+          <div id="carouselRight{{i}}" class="carousel slide w-50" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+              @for (img of project.imgs; track img; let j = $index) {
+                <div class="carousel-item" [class.active]="j === 0">
+                  <div class="img-container">
+                    <img class="img-feature-project rounded d-block w-100"
+                         [src]="img"
+                         [alt]="project.Title" />
+                  </div>
+                </div>
+              }
+            </div>
+
+            <div class="carousel-indicators">
+              @for (img of project.imgs; track img; let j = $index) {
+                <button type="button"
+                        attr.data-bs-target="#carouselRight{{i}}"
+                        [attr.data-bs-slide-to]="j"
+                        [class.active]="j === 0"
+                        attr.aria-label="Slide {{j+1}}">
+                </button>
+              }
+            </div>
+          </div>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,148 @@
+{
+    "Header.Item1": "About me",
+    "Header.Item2": "Experience",
+    "Header.Item3": "Projects",
+    "Header.Item4": "Skills",
+    "Header.Item5": "Contact",
+    "Header.cvBtn": "Resume",
+    "Header.cvName": "VuDinhLam_English_CV.pdf",
+
+    "Banner.Pretitle": "Hello world, My name is ",
+    "Banner.Description": "I am a <span class='underline'>Fullstack Developer</span> specializing in <span class='underline'>Spring Boot</span> and <span class='underline'>Angular</span>, with production experience building scalable backend APIs, responsive web apps, and native <span class='underline'>Kotlin Android</span> apps. Proven in deploying secure cloud systems on <span class='underline'>AWS</span> with automated <span class='underline'>CI/CD</span> and robust <span class='underline'>Observability</span> — looking to build and deploy high-performance applications.",
+    "Banner.ActionBtn": "Say Hi",
+
+    "AboutMe.Title": "About Me",
+    "AboutMe.Paragraphs": [
+        "I'm a <span class='underline'>Fullstack Developer</span> specializing in building enterprise-grade backend systems using <span class='underline'>Spring Boot</span> and dynamic, responsive frontends with <span class='underline'>Angular</span>.",
+        "I have hands-on experience developing native mobile applications with <span class='underline'>Kotlin Android</span>, creating seamless multi-platform experiences.",
+        "Additionally, during my internship, I gained practical experience developing backend services using <span class='underline'>Python</span>, building efficient RESTful APIs and working with real-time systems.",
+        "I own the entire development lifecycle — from initial architecture and database design to containerization with <span class='underline'>Docker</span>, automated <span class='underline'>CI/CD pipelines</span>, and deployment on <span class='underline'>AWS</span>.",
+        "I place a strong emphasis on system reliability, utilizing modern <span class='underline'>Observability</span> tools to monitor, optimize, and scale production environments effectively."
+    ],
+
+    "Education.Title": "Education",
+    "Education.ExperienceTitle": "Work Experience",
+    "Education.Records": [
+        {
+            "Tab": "University",
+            "Degree": "In Progress",
+            "School": "Dong Nai Technology University",
+            "Date": "Sep 2021 – Oct 2026",
+            "Description": [
+                "Major in <span class='underline'>Information Technology</span>",
+                "Thesis: <span class='underline'>SignConnect</span> — Real-time Sign Language Recognition System defended before academic committee",
+                "Focus on Software Engineering, Database Systems, and Applied AI",
+                "Expected graduation: October 2026"
+            ]
+        },
+        {
+            "Tab": "Self-learn",
+            "Degree": "Backend & AI/ML (Self-taught)",
+            "School": "Udemy · Coursera · Official Docs",
+            "Date": "2022 – Present",
+            "Description": [
+                "Focused on <span class='underline'>Python</span>, <span class='underline'>FastAPI</span>, <span class='underline'>PyTorch</span>, <span class='underline'>TensorFlow</span>",
+                "Studied cloud fundamentals: <span class='underline'>AWS EC2, S3, RDS</span>, Docker, CI/CD",
+                "Practiced <span class='underline'>Data Structures & Algorithms</span> for technical interviews"
+            ]
+        }
+    ],
+
+    "Services": {
+        "Title": "Skills & Services",
+        "Backend": {
+            "Title": "Fullstack Development",
+            "Description": "Building production-grade web applications. I design robust backend systems using <span class='underline'>Spring Boot</span> paired with relational databases, and craft highly responsive, interactive interfaces with <span class='underline'>Angular</span>."
+        },
+        "DevOps": {
+            "Title": "DevOps & Infrastructure",
+            "Description": "Designing and operating automated delivery pipelines. Experienced with <span class='underline'>Docker</span> containerization, <span class='underline'>CI/CD pipelines</span>, <span class='underline'>AWS</span> cloud provisioning, and ensuring system reliability with robust <span class='underline'>Observability</span> stacks."
+        },
+        "AI": {
+            "Title": "Mobile Development",
+            "Description": "Crafting high-performance native Android applications using <span class='underline'>Kotlin</span>. Focused on clean architecture, modern Jetpack libraries, smooth user experiences, and seamless backend API integration."
+        }
+    },
+
+    "Experience.Records": [
+        {
+            "Role": "Backend Developer Intern",
+            "Company": "Automate-Solutions",
+            "Date": "10/2025 – 04/2026",
+            "Descriptions": [
+                "Designed RESTful API endpoints, data schemas, and business logic for 3 core B2B modules (Vendors, Scope of Services, Country Requirements) on a live production platform used by external enterprise clients.",
+                "Increased API test coverage from <strong>40% → 80%</strong> via pytest, eliminating regression bugs across 3 consecutive sprints before reaching production.",
+                "Built and deployed CI/CD pipelines with Grafana alerting, cutting manual deployment time from <strong>~45 min → ~8 min</strong> across staging and production environments."
+            ],
+            "Tags": ["FastAPI", "pytest", "CI/CD", "Grafana", "AWS"],
+            "Link": "https://alpha.atlas.galvanek-bau.de",
+            "LinkText": "atlas.galvanek-bau.de"
+        },
+        {
+            "Role": "Freelance Backend Developer",
+            "Company": "Self-employed",
+            "Date": "2025 – Present",
+            "Descriptions": [
+                "Take on client projects end-to-end — from requirements gathering to <span class='underline'>production deployment</span>, covering both frontend and backend.",
+                "Integrate <span class='underline'>AI features</span> into client products — including chatbots, recommendation logic, and ML model serving via API endpoints."
+            ],
+            "Tags": ["FastAPI", "Angular", "Python", "AI Integration"],            
+            "Link": "",
+            "LinkText": ""
+        }
+    ],
+
+    "Project.Title": "My Projects",
+    "Project.Label": "Highlighted Project",
+    "Project.Projects": [
+        {
+            "Title": "SignConnect – Real-time Sign Language Recognition",
+            "Description": "Full-stack real-time sign language recognition system — <span class='underline'>FastAPI AI backend</span> (BiLSTM model) + <span class='underline'>Next.js/MediaPipe frontend</span> — enabling live subtitle generation during video calls with <span class='underline'>~85% recognition accuracy</span>. Shipped to 4 real users from hearing-impaired schools.",
+            "imgs": [
+                "./images/signConnect/demo1.png",
+                "./images/signConnect/demo2.png",
+                "./images/signConnect/demo3.jpeg"
+            ],
+            "ghLink": "https://github.com/Lakeserl/Graduation-Thesis",
+            "demoLink": "https://www.youtube.com/watch?v=D0aOYq8ERb0",
+            "Technologies": ["FastAPI", "BiLSTM", "PyTorch", "MediaPipe", "Next.js", "WebSocket"]
+        },
+        {
+            "Title": "CalmSKIN – Skincare Microservices E-Commerce Platform",
+            "Description": "A production-grade skincare e-commerce platform built with a <span class='underline'>Spring Boot 3 microservices architecture</span> and an <span class='underline'>Angular 21 + Tailwind CSS v4</span> front-end. Features a unique <span class='underline'>AI Face Scan Tool</span> (Spring AI + Gemini API) for automated skin diagnostics, asynchronous message brokering via <span class='underline'>Apache Kafka</span>, Redis caching, robust API gateway routing with JWT, and complete end-to-end telemetry (Micrometer, Zipkin, Prometheus, Grafana) containerized via Docker.",
+            "imgs": [
+                "./images/calmSkin/demo1.png",
+                "./images/calmSkin/demo2.png",
+                "./images/calmSkin/demo3.png",
+                "./images/calmSkin/demo4.png"
+            ],
+            "ghLink": "https://github.com/Lakeserl/CalmSkin",
+            "ghLinkFe": "https://github.com/Lakeserl/CalmSkin-fe",
+            "demoLink": "",
+            "Technologies": ["Spring Boot 3", "Angular 21", "Tailwind CSS v4", "Spring Cloud", "Apache Kafka", "PostgreSQL", "Redis", "Docker", "Prometheus & Grafana"]
+        }
+    ],
+
+    "OtherProjects.Title": "More Projects",
+    "OtherProjects.Projects": [
+      {
+          "Title": "Online Ordering Food",
+          "Description": "A <span class='underline'>backend REST API</span> for an online food ordering platform — handling <span class='underline'>menu management</span>, <span class='underline'>ingredient customization</span>, <span class='underline'>order processing</span>, and <span class='underline'>order tracking</span>, built entirely with Spring Boot.",
+          "ghLink": "https://github.com/Lakeserl/Online-Order-Food",
+          "demoLink": "",
+          "Technologies": ["Spring Boot", "Java", "MySQL"]
+      },
+      {
+          "Title": "FastAPI CRUD engine",
+          "Description": "A <span class='underline'>reusable CRUD engine</span> for FastAPI — automates REST endpoint generation with repository pattern, router scaffolding, filtering, pagination, and permissions. Supports advanced features like <span class='underline'>caching</span>, <span class='underline'>rate limiting</span>, <span class='underline'>webhooks</span>, and audit hooks — significantly reducing boilerplate when building production APIs.",
+          "ghLink": "https://github.com/Lakeserl/fastapi-crud-engine",
+          "demoLink": "",
+          "Technologies": ["FastAPI", "Python", "SQLAlchemy"]
+      }
+    ],
+
+    "Contact.Pretitle": "And... what's next?",
+    "Contact.Title": "Get In Touch!",
+    "Contact.Content": "I'm currently open to new opportunities — whether it's a backend role, a freelance project, or just a chat about tech. My inbox is always open!",
+    "Contact.Btn": "Contact Me"
+}

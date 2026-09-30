@@ -1,0 +1,268 @@
+@use "./../../../../variables.scss" as *;
+
+.education {
+  max-width: 700px;
+  margin: auto;
+
+  .title-tab-content {
+    color: $LightestSlate;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .education-time {
+    font-family: $CodeFont;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    color: $LightestSlate;
+    margin-bottom: 20px;
+  }
+
+  .education-description {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    &:before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: $Green;
+    }
+  }
+}
+
+// ── Education tabs (existing) ────────────────────────────────────
+.education .education-tabs {
+  display: flex;
+
+  .tab-content {
+    margin-left: 40px;
+  }
+
+  ul {
+    display: block;
+    width: 140px;
+    border: none;
+  }
+
+  li {
+    border-left: 2px solid $LightestNavy;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-left-color: rgb(48, 60, 85);
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    height: 42px;
+    padding: 0 20px 2px;
+    text-align: left;
+    white-space: nowrap;
+    font-family: $CodeFont;
+    font-size: 14px;
+    color: $Slate;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+  }
+
+  a.active {
+    background-color: $LightNavy !important;
+    color: $Green !important;
+    border-color: transparent !important;
+  }
+
+  a:hover {
+    background-color: $LightNavy !important;
+    color: $Green !important;
+    border-color: transparent !important;
+  }
+}
+
+// ── Experience Timeline (NEW) ────────────────────────────────────
+.experience-timeline {
+  position: relative;
+  padding-left: 2rem;
+  max-width: 700px;
+  margin: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0.45rem;
+    top: 0.5rem;
+    bottom: 1rem;
+    width: 2px;
+    background: $Green;
+    opacity: 0.3;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+
+    .timeline-dot {
+      position: absolute;
+      left: -1.62rem;
+      top: 0.45rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $Green;
+      box-shadow: 0 0 8px $Green;
+    }
+
+    .timeline-content {
+
+      .title-tab-content {
+        color: $LightestSlate;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 4px;
+
+        .school-tab-content {
+          color: $Green;
+          font-weight: 400;
+        }
+      }
+
+      .education-time {
+        font-family: $CodeFont;
+        font-size: 13px;
+        color: $Slate;
+        margin-bottom: 12px;
+      }
+
+      .timeline-desc-list {
+        padding-left: 1.2rem;
+        margin-bottom: 0.8rem;
+        list-style: none;
+
+        li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 8px;
+          font-size: 15px;
+          color: $Slate;
+          line-height: 1.6;
+
+          &:before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: $Green;
+          }
+        }
+      }
+
+      .timeline-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 0.7rem;
+
+        .tag {
+          font-family: $CodeFont;
+          font-size: 12px;
+          padding: 2px 10px;
+          border-radius: 4px;
+          border: 1px solid $Green;
+          color: $Green;
+          opacity: 0.8;
+        }
+      }
+
+      .timeline-link {
+        font-family: $CodeFont;
+        font-size: 13px;
+        color: $Green;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        i {
+          font-size: 11px;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
+
+// ── Responsive ───────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .education {
+    padding-top: 30px;
+
+    .education-description {
+      padding: 0;
+      font-size: 15px;
+    }
+
+    .title-tab-content {
+      font-size: 18px;
+    }
+  }
+
+  .experience-timeline {
+    padding-left: 1.5rem;
+
+    .timeline-item {
+      .timeline-content {
+        .title-tab-content {
+          font-size: 16px;
+        }
+
+        .timeline-desc-list li {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  ::ng-deep .education-tabs {
+    display: block !important;
+
+    .tab-content {
+      margin-left: 0 !important;
+      margin-top: 20px;
+    }
+
+    ul {
+      display: flex !important;
+      flex-wrap: wrap;
+      width: 100% !important;
+      margin-bottom: 20px;
+      justify-content: center;
+
+      li {
+        border-left: none;
+        border-bottom: 2px solid $LightestNavy;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        a {
+          font-size: 12px;
+          padding: 6px 12px;
+          min-width: 80px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+<section class="section education" id="education">
+    <div class="container">
+        <div class="section-box">
+
+            <!-- ── WORK EXPERIENCE ──────────────────────────────── -->
+            <div class="about-title mb-5 fade-up">
+                <h3 class="e-font section-title">
+                    <span class="code-font n-section-title">02.</span>
+                    {{"Education.ExperienceTitle" | translate}}
+                </h3>
+            </div>
+
+            <div class="experience-timeline fade-up mb-5">
+                @for (exp of "Experience.Records" | translate; track exp.Company) {
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+
+                        <h4 class="title-tab-content">
+                            {{exp.Role}}
+                            <span class="school-tab-content"> · {{exp.Company}}</span>
+                        </h4>
+                        <h5 class="education-time">{{exp.Date}}</h5>
+
+                        @if (exp.Descriptions.length > 0) {
+                        <ul class="timeline-desc-list">
+                            @for (desc of exp.Descriptions; track $index) {
+                            <li [innerHTML]="desc"></li>
+                            }
+                        </ul>
+                        }
+
+                        <div class="timeline-tags">
+                            @for (tag of exp.Tags; track $index) {
+                            <span class="tag">{{tag}}</span>
+                            }
+                        </div>
+
+                        @if (exp.Link) {
+                        <a class="timeline-link" [href]="exp.Link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> {{exp.LinkText}}
+                        </a>
+                        }
+
+                    </div>
+                </div>
+                }
+            </div>
+
+            <!-- ── EDUCATION ─────────────────────────────────────── -->
+            <div class="about-title mb-4 fade-up">
+                <h3 class="e-font section-title">
+                    <span class="code-font n-section-title">02b.</span>
+                    {{"Education.Title" | translate}}
+                </h3>
+            </div>
+
+            <div class="education-tabs fade-up">
+                <ul class="nav nav-tabs education-tabs" role="tablist">
+                    @for (record of "Education.Records" | translate; track record.Tab; let i = $index) {
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            [class.active]="active === i"
+                            (click)="active = i">
+                            {{record.Tab}}
+                        </a>
+                    </li>
+                    }
+                </ul>
+                <div class="tab-content mt-2">
+                    @for (record of "Education.Records" | translate; track record.Tab; let i = $index) {
+                        @if (active === i) {
+                        <div>
+                            <h4 class="title-tab-content">
+                                {{record.Degree}} |
+                                <span class="school-tab-content">{{record.School}}</span>
+                            </h4>
+                            <h5 class="education-time">{{record.Date}}</h5>
+                            @for (description of record.Description; track description) {
+                                @if (description) {
+                                <p class="education-description" [innerHTML]="description"></p>
+                                }
+                            }
+                        </div>
+                        }
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
